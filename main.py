@@ -74,15 +74,15 @@ if change_ans == True:
             # Tree for just changing one of the answers
             if one_or_all == "one":
                   print("Okay! Which one in particular are you looking to change?\n")
-                  one_num = input("Please enter the corresponding number:\n"
+                  one_num = int(input("Please enter the corresponding number:\n"
                         "1. Your Goal\n"
                         "2. Reality of your Situation\n"
                         "3. Your Options\n"
-                        "4. What's next?\n")
+                        "4. What's next?\n"))
                   
                   # Match (switch) statement to target which one of the four options the user wants to change
                   while answered3 != True:
-                        match one_or_all:
+                        match one_num:
 
                               # Changing the Goal
                               case 1:
@@ -110,7 +110,7 @@ if change_ans == True:
                                     answered3 = True
                               
                               # Failsafe incase they enter anything that isn't valid
-                              case _:
+                              case other:
                                     print("Please only enter a valid number between 1 and 4 for your choice.\n")
                   
                   # Show the users their answers now with the amended answers
