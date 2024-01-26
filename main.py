@@ -223,3 +223,4 @@ print("Okay! With that, we're done! I'll display all of your answers below, cate
       "Your Options: " + O + " and the expansions upon them:" + exp_opt_1 + " " + exp_opt_2 +" "+ exp_opt_3 +" & "+ exp_opt_4 + "\n"
       "And finally, whats next for you: " + W + " and the expansions upon them:" + exp_next_1 + " " + exp_next_2 +" "+ exp_next_3 +" & "+ exp_next_4 + "\n"
       "With that, our review is complete! Thank you so much for using this service, have a wonderful rest of your day.")
+quit 
