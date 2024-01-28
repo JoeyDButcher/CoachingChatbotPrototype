@@ -34,13 +34,11 @@ print("Sounds good! We're half way there, keep it up!")
 
 # Take input for what the user's options going forward are
 O = input("Alright, what are your options from here? For help: Consider fully what options there are"
-O = input("Alright, what are your options from here? For help: Consider fully what options there are"
           "before you, how might each of these different options play out and also how you would rank all of these "
           "options.\n")
 print("Alright, we're almost done now, just one more section to think about!\n")
 
 # Take input for what is next for the user
-W = input("Finally: What do you intend to do next? How are you commit to a path forward with this? Think about: How committed you are "
 W = input("Finally: What do you intend to do next? How are you commit to a path forward with this? Think about: How committed you are "
           "to this goal, what are the first steps for you to take on this and what might get in your way\n")
 
@@ -166,58 +164,59 @@ while ans_change_thing != True:
                         answered2 = True
                   else:
                         print("I'm sorry, I didn't understand that. Please enter only either 'One' or 'All'\n")
-      
+
+if answered or answered2 == True:     
 # Go into the In Depth Questions
-print("Alright! With that done, we're going to delve more in detail with the questions now.\n"
+      print("Alright! With that done, we're going to delve more in detail with the questions now.\n"
       "This next segment will break down all the prior portions, and delve deeper into each with a series of questions.\n"
       "Feel free to close out the program at any point if you feel you have recieved sufficient help!\n")
 
-#Expanded Goal section.
-print("To begin with, let's have a further look into your goals. I'll be asking you four further questions, to allow you more time to think\n"
+      #Expanded Goal section.
+      print("To begin with, let's have a further look into your goals. I'll be asking you four further questions, to allow you more time to think\n"
       "about your goals. For brevity's sake, I won't ask you about wether you consider your goals long/short term, but please try to consider this independently.\n")
 
-exp_goal_1 = input("Firstly, when considering your goal in its entirety, does it feel like a Gold, Silver or Bronze medal to you?\n"
+      exp_goal_1 = input("Firstly, when considering your goal in its entirety, does it feel like a Gold, Silver or Bronze medal to you?\n"
                    "Alongside this, also consider what the other medals would look like. For example: If your current goal is a 'Gold Medal' standard, what does Silver & Bronze look like?\n")
 
-exp_goal_2 = input("Next up, how do you think it would feel when you finally achieved your goal?\n")
+      exp_goal_2 = input("Next up, how do you think it would feel when you finally achieved your goal?\n")
 
-exp_goal_3 = input("Okay! Thirdly, How important does this goal feel to you? You can consider this question in terms of, or independently of the medal question if it helps.\n")
+      exp_goal_3 = input("Okay! Thirdly, How important does this goal feel to you? You can consider this question in terms of, or independently of the medal question if it helps.\n")
 
-exp_goal_4 = input("Lastly for Goals, does the goal infront of you feel challenging, but also achievable? If they don't, you might have to re-consider them.")
+      exp_goal_4 = input("Lastly for Goals, does the goal infront of you feel challenging, but also achievable? If they don't, you might have to re-consider them.")
 
-#Expanded Reality Section
-print("Alright, now after reviewing the goals, let's cover some further questions around the reality of your current situation.\n")
+      #Expanded Reality Section
+      print("Alright, now after reviewing the goals, let's cover some further questions around the reality of your current situation.\n")
 
-exp_reality_1 = input("Firstly, what is the size of the gap from where you are, to where you want to be?\n")
+      exp_reality_1 = input("Firstly, what is the size of the gap from where you are, to where you want to be?\n")
 
-exp_reality_2 = input("Alright, that makes sense! Next: Who else is there supporting you to meet these goals?\n")
+      exp_reality_2 = input("Alright, that makes sense! Next: Who else is there supporting you to meet these goals?\n")
 
-exp_reality_3 = input("Okay! Finally: Do you have all the knowledge/skills that you need to meet these goals? If not: What do you lack?\n")
+      exp_reality_3 = input("Okay! Finally: Do you have all the knowledge/skills that you need to meet these goals? If not: What do you lack?\n")
 
-#Expanded Options section:
-print("Okay, now we've reached the opions you have available to you! As with the prior segments, please consider your prior answers in much greater detail.\n")
+      #Expanded Options section:
+      print("Okay, now we've reached the opions you have available to you! As with the prior segments, please consider your prior answers in much greater detail.\n")
 
-exp_opt_1 = input("What are the logical next steps for you? Also consider what your gut is telling you to do.\n")
+      exp_opt_1 = input("What are the logical next steps for you? Also consider what your gut is telling you to do.\n")
 
-exp_opt_2 = input("What ideas do those around you have about your options?\n")
+      exp_opt_2 = input("What ideas do those around you have about your options?\n")
 
-exp_opt_3 = input("What happens if you do nothing currently?\n")
+      exp_opt_3 = input("What happens if you do nothing currently?\n")
 
-exp_opt_4 = input("Finally, if you were challenged to create some more options, what would they be?\n")
+      exp_opt_4 = input("Finally, if you were challenged to create some more options, what would they be?\n")
 
-#Expanded Next Section
-print("Okay, we're onto the final segment now. We'll have an oppurtunity to review once we're done here!\n")
+      #Expanded Next Section
+      print("Okay, we're onto the final segment now. We'll have an oppurtunity to review once we're done here!\n")
 
-exp_next_1 = input("Firstly: Are you clear enough on what you need to do next?\n")
+      exp_next_1 = input("Firstly: Are you clear enough on what you need to do next?\n")
 
-exp_next_2 = input("Okay, that makes sense! Next up: What is the most helpful mindset you could adopt?\n")
+      exp_next_2 = input("Okay, that makes sense! Next up: What is the most helpful mindset you could adopt?\n")
 
-exp_next_3 = input("Next up: Are you focused on things you can control/influence, or are you worried about external factors beyond your control?\n")
+      exp_next_3 = input("Next up: Are you focused on things you can control/influence, or are you worried about external factors beyond your control?\n")
 
-exp_next_4 = input("Finally: Who else is involved, or do you need to speak to anyone else about your intentions?\n")
+      exp_next_4 = input("Finally: Who else is involved, or do you need to speak to anyone else about your intentions?\n")
 
-# Review
-print("Okay! With that, we're done! I'll display all of your answers below, category by category. Please feel free to use this program again if you feel you need more help!\n"
+      # Review
+      print("Okay! With that, we're done! I'll display all of your answers below, category by category. Please feel free to use this program again if you feel you need more help!\n"
       "Your Goals: " + G + " and the expansions upon them:" + exp_goal_1 + " " + exp_goal_2 +" "+ exp_goal_3 +" & "+ exp_goal_4 + "\n"
       "Your Reality: " + R + " and the expansions upon them:" + exp_reality_1 + " " + exp_reality_2 +" & "+ exp_reality_3 +"\n"
       "Your Options: " + O + " and the expansions upon them:" + exp_opt_1 + " " + exp_opt_2 +" "+ exp_opt_3 +" & "+ exp_opt_4 + "\n"
