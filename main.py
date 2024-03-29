@@ -187,7 +187,7 @@ if answered or answered2 == True:
 
       exp_goal_3 = input("Okay! Thirdly, How important does this goal feel to you? You can consider this question in terms of, or independently of the medal question if it helps.\n")
 
-      exp_goal_4 = input("Lastly for Goals, does the goal infront of you feel challenging, but also achievable? If they don't, you might have to re-consider them.")
+      exp_goal_4 = input("Lastly for Goals, does the goal infront of you feel challenging, but also achievable? If they don't, you might have to re-consider them.\n")
 
       #Expanded Reality Section
       print("Alright, now after reviewing the goals, let's cover some further questions around the reality of your current situation.\n")
@@ -222,9 +222,19 @@ if answered or answered2 == True:
 
       # Review
       print("Okay! With that, we're done! I'll display all of your answers below, category by category. Please feel free to use this program again if you feel you need more help!\n"
-      "Your Goals: " + G + " and the expansions upon them:" + exp_goal_1 + " " + exp_goal_2 +" "+ exp_goal_3 +" & "+ exp_goal_4 + "\n"
-      "Your Reality: " + R + " and the expansions upon them:" + exp_reality_1 + " " + exp_reality_2 +" & "+ exp_reality_3 +"\n"
-      "Your Options: " + O + " and the expansions upon them:" + exp_opt_1 + " " + exp_opt_2 +" "+ exp_opt_3 +" & "+ exp_opt_4 + "\n"
-      "And finally, whats next for you: " + W + " and the expansions upon them:" + exp_next_1 + " " + exp_next_2 +" "+ exp_next_3 +" & "+ exp_next_4 + "\n"
-      "With that, our review is complete! Thank you so much for using this service, have a wonderful rest of your day.")
-quit 
+      "Your Goals: " + G + " and the expansions upon them:" + exp_goal_1 + ", " + exp_goal_2 +", "+ exp_goal_3 +" & "+ exp_goal_4 + "\n"
+      "Your Reality: " + R + " and the expansions upon them:" + exp_reality_1 + ", " + exp_reality_2 +" & "+ exp_reality_3 +"\n"
+      "Your Options: " + O + " and the expansions upon them:" + exp_opt_1 + ", " + exp_opt_2 +", "+ exp_opt_3 +" & "+ exp_opt_4 + "\n"
+      "And finally, whats next for you: " + W + " and the expansions upon them:" + exp_next_1 + ", " + exp_next_2 +", "+ exp_next_3 +" & "+ exp_next_4 + "\n"
+      "With that, our review is complete! Thank you so much for using this service, have a wonderful rest of your day.\n")
+
+      user_quit = False
+
+      while user_quit != True:
+            user_quit_check = input("Please take as long as you need to review our chat today. When you are done, simply enter 'Quit' into this box, and I will close the program.\n").lower()
+
+            if user_quit_check == 'quit':
+                  user_quit = True
+                  quit
+            else:
+                  print("Please only enter 'Quit' when you are ready to close the program. I am unable to converse with you any further.")
