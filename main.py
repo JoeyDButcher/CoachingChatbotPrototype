@@ -13,6 +13,9 @@ change_ans = False
 # var to keep user in a loop until they either decide they don't want to change their answers or they finish changing them
 ans_change_thing = False
 
+# var to ensure user enters only a number when asked which specific answer they would like to change:
+one_num_check = False
+
 # Primary body of questions
 print("\nHello! Welcome to this brand new prototype Coaching Chatbot. Please keep in mind: This is NOT a generative tool."
       "I will not be able to provide any real feedback for you, due to my current limitations. This tool in its current form is designed to be more of a self reflection tool.\n"
@@ -81,54 +84,56 @@ while ans_change_thing != True:
                   # Tree for just changing one of the answers
                   if one_or_all == "one":
                         print("Okay! Which one in particular are you looking to change?\n")
-                        one_num = input("Please enter the corresponding number:\n"
-                              "1. Your Goal\n"
-                              "2. Reality of your Situation\n"
-                              "3. Your Options\n"
-                              "4. What's next?\n")
+                        while one_num_check != True:
+                              one_num = input("Please enter the corresponding number:\n"
+                                    "1. Your Goal\n"
+                                    "2. Reality of your Situation\n"
+                                    "3. Your Options\n"
+                                    "4. What's next?\n")
+                              
+                              if one_num == '1' or '2' or '3' or '4':
+                                    one_num_check = True
+                              else:
+                                    print("Please only enter a valid number between 1 and 4 for your choice.\n")
                   
                         # Match (switch) statement to target which one of the four options the user wants to change
                         while answered3 != True:
-                              match one_or_all:
+                              match one_num:
 
-                                    # Changing the Goal
-                                    case 1:
+                                          # Changing the Goal
+                                    case '1':
                                           print("You've chosen to change your Goal! While I would reccommend in this case to go and review"
-                                                "all of your answers, I'm more than happy to help you just change this one.\n")
+                                                      "all of your answers, I'm more than happy to help you just change this one.\n")
                                           G = input("What is it that you'd like to change your goal to? Please enter it as if you were entering it for the first time\n")
                                           answered3 = True
 
-                                    # Changing the Reality
-                                    case 2:
+                                          # Changing the Reality
+                                    case '2':
                                           print("You've chosen to change the Reality of your Situation! That's completely understandable!\n")
                                           R = input("What is it you'd like to change the Reality to? Please enter it as if you were entering it for the first time\n")
                                           answered3 = True
                               
-                                    # Changing the Options
-                                    case 3:
+                                          # Changing the Options
+                                    case '3':
                                           print("You've chosen to change what your options are! I hope there are more available to you than less!")
                                           O = input("What are your options now? Please enter it as if you were entering it for the first time\n")
                                           answered3 = True
                               
-                                    # Changing What's Next
-                                    case 4:
+                                          # Changing What's Next
+                                    case '4':
                                           print("You've chosen to change what's next for you! That's entirely understandable!")
                                           W = input("What is next for you now? Please enter it as if you were entering it for the first time\n")
                                           answered3 = True
                               
-                                    # Failsafe incase they enter anything that isn't valid
-                                    case _:
-                                          print("Please only enter a valid number between 1 and 4 for your choice.\n")
-                  
                         # Show the users their answers now with the amended answers
                         print("Okay! With your amended answer your answers now look like this!\n"
                         "Your Goal is: " + G + "!\n"
                         "Your Reality is: " + R + "!\n"
                         "Your Options are: " + O + "!\n"
-                        "Your What Next is: " + W + "!\n"
-                        "I hope this was a helpful experience for you! Please feel free to come back again if you want any more help!\n")
+                        "Your What Next is: " + W + "!\n")
                   
                         answered2 = True
+                        ans_change_thing = True
 
                   # Tree for changing all of the user's answers instead of just one
                   elif one_or_all == "all":
@@ -158,10 +163,10 @@ while ans_change_thing != True:
                         "Your Goal is now: " + G + "!\n"
                         "Your Reality is now: " + R + "!\n"
                         "Your Options are now: " + O + "!\n"
-                        "Your What Next is now: " + W + "!\n"
-                        "I hope this was a helpful experience for you! Please feel free to come back again if you want any more help!\n")
+                        "Your What Next is now: " + W + "!\n")
 
                         answered2 = True
+                        ans_change_thing = True
                   else:
                         print("I'm sorry, I didn't understand that. Please enter only either 'One' or 'All'\n")
 
