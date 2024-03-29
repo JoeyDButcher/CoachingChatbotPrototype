@@ -52,7 +52,7 @@ print("With that, we're done! Just to confirm:\n"
 # Checking if the user would like to change any of their answers or not
 while answered != True:
       ans = input("Are you satisfied with these answers, or would you like to change any of them upon further reflection?\n"
-            "Please only answer with 'Change' or 'Leave', I won't be able to understand any other answers.\n").lower()
+            "Please only answer with 'Change' or 'Skip', I won't be able to understand any other answers.\n").lower()
       
       # If they want to change them:
       if ans == "change":
@@ -61,13 +61,13 @@ while answered != True:
             change_ans = True
 
       # If they want to leave them as they are
-      elif ans == "leave":
-            print("Alright! Thank you again for using this chatbot, I hope you found your experience useful!\n")
+      elif ans == "skip":
             answered = True
+            ans_change_thing = True
 
       # Failsafe incase the user enters something that isn't "Change" or "Leave"
       else:
-            print("I'm sorry, I don't understand? Please only reply with 'Change' or 'Leave'\n")
+            print("I'm sorry, I don't understand? Please only reply with 'Change' or 'Skip'\n")
 
 # If the user chooses to change their answers, they get sent to this area
 while ans_change_thing != True:
